@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('MuseoSans_500-webfont.eot');
+    src: url('MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MuseoSans_500-webfont.woff2') format('woff2'),
+         url('MuseoSans_500-webfont.woff') format('woff'),
+         url('MuseoSans_500-webfont.ttf') format('truetype'),
+         url('MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  background: #222;
+  margin: 0;
+}
+
+.site-header {
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+  margin-right: 50px;
+  margin-top: 6px;
+
+  li {
+    font-family: 'museo_sans500';
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px;
+
+    a {
+      color: #fff;
+      line-height: 19px;
+    }
+  }
+
+  #button {
+    padding: 16px 20px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+  }
+}
+
+#logo{
+  font-family: 'Open Sans';
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-left: 50px;
+  letter-spacing: 2.5px;
+  color: #fff;
+}
+
+.splash {
+  background-image: url('/img/background.jpg'); 
+
+  .splash_wrapper {
+    text-align: center;
+
+    #neverfrost {
+      width: 540px;
+    }
+
+    .border{
+      width: 320px;
+      border: 5px solid rgba(244,244,244,.95);
+
+      &.top {
+        border-bottom: none;
+        margin: 40px auto 20px auto;
+        height: 70px;
+      }
+
+      &.bottom {
+        border-top: none;
+        border-bottom: none;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
