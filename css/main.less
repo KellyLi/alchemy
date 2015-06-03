@@ -11,9 +11,23 @@
 
 }
 
+@font-face {
+font-family: 'montserrat_light';
+src: url('Montserrat-Light.otf') format('opentype');
+}
+
+@font-face {
+font-family: 'montserrat';
+src: url('Montserrat-Regular.otf') format('opentype');
+}
+
 body {
   background: #222;
   margin: 0;
+}
+
+.wrapper {
+  min-width: 840px;
 }
 
 .site-header {
@@ -25,9 +39,11 @@ a {
 }
 
 nav {
+  min-width: 600px;
   float: right;
   margin-right: 50px;
   margin-top: 6px;
+  white-space: nowrap;
 
   li {
     font-family: 'museo_sans500';
@@ -35,6 +51,7 @@ nav {
     text-transform: uppercase;
     font-size: 14px;
     margin-left: 20px;
+    letter-spacing: .6px;
 
     a {
       color: #fff;
@@ -46,6 +63,15 @@ nav {
     padding: 16px 20px;
     border-radius: 2px;
     border: 1px solid #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #fff;
+      color: #222;
+    }
   }
 }
 
@@ -58,14 +84,24 @@ nav {
   color: #fff;
 }
 
+.yellow_divider {
+  width: 80px;
+  height: 2px;
+  background-color: #f2f06d;
+}
+
 .splash {
   background-image: url('/img/background.jpg'); 
+  background-size: cover;
 
   .splash_wrapper {
     text-align: center;
 
     #neverfrost {
       width: 540px;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      user-drag: none; 
     }
 
     .border{
@@ -82,6 +118,46 @@ nav {
         border-top: none;
         border-bottom: none;
         margin: 20px auto;
+        text-align: center;
+
+        .yellow_divider {
+          display: inline-block;
+        }
+
+        h2 {
+          font-family: 'museo_sans500', sans-serif;
+          font-weight: normal;
+          font-size: 18px;
+          color: #fff;
+          margin: 40px 30px;
+          line-height: 1.4em;
+        }
+
+        button {
+          padding: 18px 16px;
+          background-color: #f2f06d;
+          border: 0;
+          border-radius: 2px;
+          margin-bottom: 80px;
+          cursor: pointer;
+          -webkit-transition: background-color 0.5s ease;
+          -moz-transition: background-color 0.5s ease;
+          -o-transition: background-color 0.5s ease;
+          transition: background-color 0.5s ease;
+
+          &:hover {
+            background-color: #fffd80;
+          }
+
+          a {
+            text-decoration: none;
+            font-family: 'museo_sans500';
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #162c42;
+            letter-spacing: .6px;
+          }
+        }
       }
     }
   }
