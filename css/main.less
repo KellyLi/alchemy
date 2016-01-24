@@ -14,10 +14,10 @@
 body {
   background: #222;
   margin: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 p{
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
@@ -44,12 +44,12 @@ nav {
   white-space: nowrap;
 
   li {
-    font-family: 'museo_sans500';
     display: inline-block;
     text-transform: uppercase;
     font-size: 14px;
     margin-left: 20px;
     letter-spacing: .6px;
+		font-weight: 600;
 
     a {
       color: #fff;
@@ -74,7 +74,6 @@ nav {
 }
 
 #logo{
-  font-family: 'Open Sans';
   font-size: 19px;
   text-transform: uppercase;
   margin-left: 50px;
@@ -97,7 +96,7 @@ nav {
     text-align: center;
 
     #alchemy {
-      width: 420px;
+      width: 396px;
       -moz-user-select: none;
       -webkit-user-drag: none;
       user-drag: none;
@@ -105,18 +104,18 @@ nav {
 
     .border{
       width: 320px;
-      border: 8px solid rgba(244,244,244,.95);
+      border: 5px solid rgba(244,244,244,.95);
 
       &.top {
         border-bottom: none;
-        margin: 40px auto 20px auto;
+        margin: 80px auto 20px auto;
         height: 70px;
       }
 
       &.bottom {
         border-top: none;
         border-bottom: none;
-        margin: 20px auto;
+        margin: 20px auto 0;
         text-align: center;
 
         .yellow_divider {
@@ -124,7 +123,6 @@ nav {
         }
 
         h2 {
-          font-family: 'museo_sans500', sans-serif;
           font-weight: 400;
           font-size: 18px;
           color: #fff;
@@ -149,8 +147,8 @@ nav {
           }
 
           a {
+						font-family: 'Open Sans', sans-serif;
             text-decoration: none;
-            font-family: 'museo_sans500';
             text-transform: uppercase;
             font-size: 14px;
             color: #162c42;
@@ -161,48 +159,153 @@ nav {
     }
   }
   #toptriangle {
-    bottom: 100px;
-    position: relative;
-    -webkit-filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));
+    top: 528px;
+		position: absolute;
+		-webkit-filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));
     filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));
   }
 }
 
 .value {
     background-color: #eef1f2;
+		height: 200px;
 }
+
 .products {
   background-color: #2e3841;
 	text-align: center;
+	overflow: auto;
 
   h3 {
-    font-family: 'museo_sans500';
+		font-weight: 600;
+		letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 16px;
     color: white;
     text-align: center;
   }
 
-	table {
-		display: inline-block;
-		vertical-align: top;
-		text-align: left;
-
-		tr:first-child {
-			td {
-				padding: 40px 0;
-				text-align: center;
-			}
-		}
+	h4 {
+		color: #93aebb;
+		font-size: 14px;
+		max-width: 460px;
+		font-weight: 400;
+		text-align: center;
+		margin: 30px auto 50px;
 	}
 
-	table#nf {
-		tr:first-child {
-			background-color: white;
+	.table-wrapper {
+		max-width: 780px;
+		margin: 0 auto;
+
+		table {
+			float: left;
+			width: 40%;
+			text-align: left;
+			vertical-align: top;
+			border-collapse: collapse;
+
+			p {
+				margin: 0;
+				font-size: 14px;
+				color: #222;
+
+				&:first-child {
+					padding-bottom: 4px;
+				}
+			}
+
+			td {
+				width: 100%;
+				padding: 30px 20px;
+				border-bottom: 1px solid #e8eef1;
+			}
+
+			tr:first-child {
+				height: 100px;
+				border-radius: 5px 5px 0 0;
+				font-size: 32px;
+				font-weight: 300;
+				letter-spacing: 1px;
+
+				td {
+					border-radius: 5px 5px 0 0;
+				}
+			}
+
+			tr:last-child {
+				border-radius: 0 0 5px 5px;
+
+				td {
+					border-radius: 0 0 5px 5px;
+					border-bottom: none;
+				}
+			}
+
+			tr {
+				background-color: white;
+
+				&.plus-feature {
+					background-color: #e5fbf8;
+				}
+			}
+
+			button {
+				width: 80%;
+				height: 45px;
+				border-radius: 2px;
+				border: none;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 14px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			&.nf {
+				margin-right: 100px;
+
+				tr:first-child {
+					background-color: #c2fff6;
+					color: #17abc1;
+				}
+
+				button {
+					background-color: #c2fff6;
+					color: #17abc1;
+				}
+			}
+
+			&.nfplus {
+				tr:first-child {
+					background-color: #00d6b6;
+					color: white;
+				}
+
+				button {
+					background-color: #00d6b6;
+					color: white;
+				}
+			}
 		}
 	}
 }
 
-@media only screen and (max-width: 550px) {
-  .splash .splash_wrapper #alchemy {width: 95%;}
+@media only screen and (max-width: 420px) {
+	.splash .splash_wrapper {
+		#alchemy {
+			width: 300px;
+		}
+		.border {
+			width: 250px;
+		}
+	}
+	#toptriangle {
+		top: 528px;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.site-nav {
+		display: none;
+	}
 }
