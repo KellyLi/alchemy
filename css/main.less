@@ -15,6 +15,7 @@ body {
   background: #222;
   margin: 0;
 	font-family: 'Open Sans', sans-serif;
+	line-height: 1.4em;
 }
 
 p{
@@ -88,6 +89,24 @@ nav {
   margin: 0 auto;
 }
 
+h3 {
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+}
+
+h4 {
+	color: #93aebb;
+	font-size: 14px;
+	max-width: 460px;
+	font-weight: 400;
+	text-align: center;
+	margin: 30px auto 50px;
+}
+
 .splash {
   background-image: url('/img/background.jpg');
   background-size: cover;
@@ -159,7 +178,7 @@ nav {
     }
   }
   #toptriangle {
-    top: 528px;
+    top: 525px;
 		position: absolute;
 		-webkit-filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));
     filter: drop-shadow(0px -4px 2px rgba(0,0,0,.1));
@@ -176,31 +195,14 @@ nav {
 	text-align: center;
 	overflow: auto;
 
-  h3 {
-		font-weight: 600;
-		letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-  }
-
-	h4 {
-		color: #93aebb;
-		font-size: 14px;
-		max-width: 460px;
-		font-weight: 400;
-		text-align: center;
-		margin: 30px auto 50px;
-	}
-
 	.table-wrapper {
 		max-width: 780px;
 		margin: 0 auto;
+		padding: 0 40px;
+		min-height: 600px;
 
 		table {
-			float: left;
-			width: 40%;
+			width: 45%;
 			text-align: left;
 			vertical-align: top;
 			border-collapse: collapse;
@@ -227,6 +229,7 @@ nav {
 				font-size: 32px;
 				font-weight: 300;
 				letter-spacing: 1px;
+				line-height: 1.4em;
 
 				td {
 					border-radius: 5px 5px 0 0;
@@ -262,7 +265,7 @@ nav {
 			}
 
 			&.nf {
-				margin-right: 100px;
+				float: left;
 
 				tr:first-child {
 					background-color: #c2fff6;
@@ -276,6 +279,8 @@ nav {
 			}
 
 			&.nfplus {
+				float: right;
+
 				tr:first-child {
 					background-color: #00d6b6;
 					color: white;
@@ -290,7 +295,152 @@ nav {
 	}
 }
 
+.column-wrapper {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 780px;
+	margin: 0 auto;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+	text-align: left;
+
+	div {
+		display: inline-block;
+	}
+
+	p {
+		margin: 0;
+		color: #93aebb;
+		font-size: 14px;
+
+		&:first-child {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.testimonial{
+  background-image: url('/img/mountains.png');
+	background-size: cover;
+
+	.column-wrapper {
+		padding-bottom: 20px;
+	}
+
+	p {
+		color: #fff;
+	}
+
+	svg {
+		margin-bottom: -5px;
+	}
+
+	.logo {
+		width: 100px;
+		height: 30px;
+		border: 1px solid #fff;
+		margin-bottom: 10px;
+	}
+}
+
+.contact {
+	background-color: #f6f9fc;
+	padding-top: 1px;
+	padding-bottom: 50px;
+
+	h3, h4 {
+		color: #2b3c53;
+	}
+
+	form {
+		width: 630px;
+		margin: 0 auto;
+		text-align: center;
+
+		input {
+			font-size: 14px;
+			width: calc(100% - 40px);
+			padding: 20px;
+			border: 1px solid #c8ced6;
+			border-radius: 2px;
+			margin-bottom: 8px;
+
+			&[name='message'] {
+				padding-bottom: 100px;
+			}
+
+			&[type='submit'] {
+				display: block;
+				margin: 0 auto;
+				width: 180px;
+				padding: 15px;
+				margin-top: 40px;
+				text-transform: uppercase;
+				color: #fff;
+				letter-spacing: 1px;
+				font-size: 14px;
+				font-family: 'Open Sans', sans-serif;
+				background-color: #25344a;
+				border: none;
+				border-radius: 2px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.column-wrapper {
+		width: 80%;
+	}
+
+	.products .table-wrapper {
+		padding: 0 40px;
+		table {
+			width: calc(50%-2px);
+		}
+
+		table.nf {
+			float: left;
+			margin-right: 0px;
+		}
+
+		table.nfplus {
+			float: right;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.products {
+		.table-wrapper {
+			margin: 0 20px;
+			padding: 0;
+
+			table.nf {
+				margin: 0 0 40px 0;
+				float: none;
+			}
+
+			table.nfplus {
+				margin-bottom: 40px;
+				float: none;
+			}
+
+			table {
+				width: 100%;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 420px) {
+	svg {
+		height: 50px;
+	}
 	.splash .splash_wrapper {
 		#alchemy {
 			width: 300px;
@@ -299,8 +449,35 @@ nav {
 			width: 250px;
 		}
 	}
-	#toptriangle {
-		top: 528px;
+	.splash {
+		#toptriangle {
+			top: 584px;
+		}
+	}
+
+	.column-wrapper {
+		-webkit-column-count: auto;
+		-moz-column-count: auto;
+		column-count: auto;
+		-webkit-column-gap: normal;
+		-moz-column-gap: normal;
+		column-gap: normal;
+		width: auto;
+		padding-top: 50px;
+		margin: 0 40px;
+
+		div {
+			margin-bottom: 40px;
+		}
+	}
+
+	.contact {
+		form {
+			width:100%;
+			input {
+				width: calc(100%-40px);
+			}
+		}
 	}
 }
 
