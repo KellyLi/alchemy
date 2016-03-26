@@ -262,6 +262,9 @@ nav li a {
   background-color: #fcfeff;
   text-align: center;
 }
+.home .home_page_benefits a.button {
+  margin: 10px 0 0;
+}
 .home .home_page_benefits .section {
   text-align: left;
 }
@@ -469,6 +472,7 @@ nav li a {
 .exoshield .warranty h1.contact_us {
   margin-bottom: 30px;
 }
+<<<<<<< HEAD
 .partnerships .splash {
   background-color: #fcfeff;
   text-align: center;
@@ -639,6 +643,7 @@ nav li a {
   width: 22%;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
+<<<<<<< HEAD
 .fade-in {
   opacity: .3;
   /* make things invisible upon start */
