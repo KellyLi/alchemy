@@ -6,7 +6,7 @@ pagetype: home
 <div class='home'>
 	<section class='splash'>
     {% include header.html %}
-    <div class='splash_wrapper'>
+    <div class='splash_wrapper fade-in-up'>
       <div class ='border top'>
 				<h1>Introducing</h1>
 			</div>
@@ -18,7 +18,7 @@ pagetype: home
     </div>
   </section>
 	<section class = 'intro'>
-		<div class="section group">
+		<div class="section group fade-in-up delayed">
 			<div class="col span_1_of_2">
 				<h1>Introducing ExoShield</h1>
 				<div class='red_divider'></div>
@@ -118,11 +118,11 @@ pagetype: home
 	  <h1>Contact Us</h1>
     <div class='red_divider'></div>
 		<p>Contact us for a free trial and more information about our products.</p>
-		<form>
-			<input type="text" name="name" placeholder="Name">
-			<input type="email" name="email" placeholder="Email">
-			<input type="text" name="message" placeholder="Your message">
-			<input type="submit" value="Submit">
+		<form action="https://formspree.io/kelly.li.chang@gmail.com" method="POST">
+					<input type="text" name="name" placeholder="Name">
+					<input type="email" name="_replyto" placeholder="Email">
+					<input type="text" name="message" placeholder="Your message">
+					<input type="submit" value="Send">
 		</form>
 	</section>
 
