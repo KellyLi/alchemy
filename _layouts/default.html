@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+  <!-- Don't include default header on home b/c of background image -->
+  {% if page.pagetype != 'home' %}
+    {% include header.html %}
+  {% endif %}
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
