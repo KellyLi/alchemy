@@ -262,9 +262,6 @@ nav li a {
   background-color: #fcfeff;
   text-align: center;
 }
-.home .home_page_benefits a.button {
-  margin: 10px 0 0;
-}
 .home .home_page_benefits .section {
   text-align: left;
 }
@@ -472,7 +469,6 @@ nav li a {
 .exoshield .warranty h1.contact_us {
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
 .partnerships .splash {
   background-color: #fcfeff;
   text-align: center;
@@ -535,6 +531,34 @@ nav li a {
   background-color: #25344a;
   border: none;
   border-radius: 2px;
+}
+.contact_details {
+  background-color: #fcfeff;
+}
+.about .splash {
+  background-color: #fcfeff;
+}
+.about .splash p {
+  margin-bottom: 20px;
+}
+.about .collaborators {
+  background-color: #f7f8f9;
+  text-align: center;
+}
+.about .collaborators img {
+  max-width: 160px;
+  margin-top: 30px;
+}
+.about .team {
+  background-color: #fcfeff;
+}
+.about .team img {
+  vertical-align: -4px;
+  width: 20px;
+  height: 20px;
+}
+.about .team .faces {
+  padding: 30px 0;
 }
 .site-footer {
   padding: 80px 0 30px;
@@ -643,7 +667,6 @@ nav li a {
   width: 22%;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
-<<<<<<< HEAD
 .fade-in {
   opacity: .3;
   /* make things invisible upon start */
