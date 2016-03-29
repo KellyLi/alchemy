@@ -473,6 +473,17 @@ nav li a {
   background-color: #fcfeff;
   text-align: center;
 }
+.partnerships .splash .partnership_details {
+  text-align: left;
+  margin-top: 30px;
+}
+.partnerships .splash .partnership_details h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+  text-align: left;
+  margin-bottom: 10px;
+}
 .partnerships .partnership_brochure,
 .partnerships .partnership_contact {
   text-align: left;
@@ -505,7 +516,9 @@ nav li a {
   margin: 0 auto;
   text-align: center;
 }
-.contact form input {
+.contact form input,
+.contact form textarea {
+  resize: none;
   font-size: 14px;
   width: calc(60%);
   padding: 20px;
@@ -513,10 +526,12 @@ nav li a {
   border-radius: 2px;
   margin-bottom: 8px;
 }
-.contact form input[name='message'] {
+.contact form input[name='message'],
+.contact form textarea[name='message'] {
   padding-bottom: 100px;
 }
-.contact form input[type='submit'] {
+.contact form input[type='submit'],
+.contact form textarea[type='submit'] {
   cursor: pointer;
   display: block;
   margin: 0 auto;
@@ -557,8 +572,14 @@ nav li a {
   width: 20px;
   height: 20px;
 }
+.about .team img.face {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 .about .team .faces {
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
 .site-footer {
   padding: 80px 0 30px;
