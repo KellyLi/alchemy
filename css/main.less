@@ -56,6 +56,13 @@ a {
   text-decoration: none;
 }
 
+#mc-embedded-subscribe { //Override Mailchimp styles
+	margin: 10px 0 0 0;
+	.contact & {
+		margin: 10px auto 0;
+	}
+}
+
 a.button {
 	cursor: pointer;
 	margin-bottom: 20px;
@@ -67,7 +74,6 @@ a.button {
 	font-size: 13px;
 	letter-spacing: .6px;
 	border-radius: 2px;
-	min-width: 140px;
 	-webkit-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
 	-o-transition: background-color 0.5s ease;
@@ -105,7 +111,7 @@ nav {
 	ul {
 		position: absolute;
 		right: 50px;
-		top: 8px;
+		top: 0;
 	}
 
   li {
@@ -360,6 +366,23 @@ nav {
 		}
 	}
 
+	.wipers {
+		margin-top: 30px;
+		img {
+			width: 140px;
+			vertical-align: top;
+		}
+		.text_wrapper {
+			display: inline-block;
+			width: 750px;
+			margin-left: 30px;
+		}
+		h2 {
+			color: #16c0c4;
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+	}
 	.cost_savings,
 	.comfort {
 		background-color: #fcfeff;

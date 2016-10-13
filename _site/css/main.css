@@ -48,6 +48,12 @@ section {
 a {
   text-decoration: none;
 }
+#mc-embedded-subscribe {
+  margin: 10px 0 0 0;
+}
+.contact #mc-embedded-subscribe {
+  margin: 10px auto 0;
+}
 a.button {
   cursor: pointer;
   margin-bottom: 20px;
@@ -59,7 +65,6 @@ a.button {
   font-size: 13px;
   letter-spacing: .6px;
   border-radius: 2px;
-  min-width: 140px;
   -webkit-transition: background-color 0.5s ease;
   -moz-transition: background-color 0.5s ease;
   -o-transition: background-color 0.5s ease;
@@ -93,7 +98,7 @@ nav {
 nav ul {
   position: absolute;
   right: 50px;
-  top: 8px;
+  top: 0;
 }
 nav li {
   display: inline-block;
@@ -302,6 +307,23 @@ nav li a {
 .exoshield .benefits p {
   color: #445057;
   margin-bottom: 20px;
+}
+.exoshield .wipers {
+  margin-top: 30px;
+}
+.exoshield .wipers img {
+  width: 140px;
+  vertical-align: top;
+}
+.exoshield .wipers .text_wrapper {
+  display: inline-block;
+  width: 750px;
+  margin-left: 30px;
+}
+.exoshield .wipers h2 {
+  color: #16c0c4;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 .exoshield .cost_savings,
 .exoshield .comfort {
