@@ -1,5 +1,5 @@
 body {
-  min-width: 940px;
+  min-width: 320px;
   background: #222;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -689,13 +689,34 @@ nav li a {
   width: 31%;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 720px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_3_of_3,
+  .span_2_of_3,
+  .span_1_of_3 {
+    width: 100%;
+  }
+}
 .span_2_of_2 {
   width: 100%;
 }
 .span_1_of_2 {
   width: 48%;
 }
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+/*  GO FULL WIDTH AT LESS THAN 720 PIXELS */
+@media only screen and (max-width: 720px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .span_2_of_2,
+  .span_1_of_2 {
+    width: 100%;
+  }
+}
 /*  GRID OF FOUR  */
 .span_4_of_4 {
   width: 100%;
@@ -709,7 +730,18 @@ nav li a {
 .span_1_of_4 {
   width: 22%;
 }
-/*  GO FULL WIDTH BELOW 480 PIXELS */
+/*  GO FULL WIDTH BELOW 720 PIXELS */
+@media only screen and (max-width: 720px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_1_of_4,
+  .span_2_of_4,
+  .span_3_of_4,
+  .span_4_of_4 {
+    width: 100%;
+  }
+}
 .fade-in {
   opacity: .3;
   /* make things invisible upon start */
@@ -825,4 +857,79 @@ nav li a {
     /* Chrome, Safari, Opera */
     transform: translateY(0);
   }
+}
+@media (max-width: 720px) {
+  nav ul {
+    display: none;
+  }
+  .home .splash .splash_wrapper {
+    text-align: center;
+  }
+  .home .splash .splash_wrapper #exoshield {
+    width: calc(90%);
+    max-width: 365px;
+  }
+  .home .splash .splash_wrapper .border {
+    width: calc(80%);
+    max-width: 320px;
+  }
+  .home .splash .splash_wrapper .border.top {
+    margin: 40px auto 10px auto;
+    height: 60px;
+  }
+  .home .splash .splash_wrapper .border.top h1 {
+    left: calc(38%);
+  }
+  .home .splash .splash_wrapper .border.bottom {
+    margin: 10px auto 0;
+    padding-bottom: 80px;
+  }
+  .home .intro #car_illustration {
+    text-align: center;
+    width: 100%;
+    margin: 60px auto 0;
+  }
+  .home .intro #car_illustration img {
+    max-width: 500px;
+  }
+  .home .value .row2 {
+    width: 100%;
+  }
+}
+a.button {
+  margin-bottom: 0;
+}
+.contact form {
+  width: calc(90%);
+}
+.contact form input,
+.contact form textarea {
+  resize: none;
+  font-size: 14px;
+  width: calc(90%);
+  padding: 20px;
+  border: 1px solid #c8ced6;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.contact form input[name='message'],
+.contact form textarea[name='message'] {
+  padding-bottom: 100px;
+}
+.contact form input[type='submit'],
+.contact form textarea[type='submit'] {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  padding: 15px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  color: #fcfeff;
+  letter-spacing: .6px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #25344a;
+  border: none;
+  border-radius: 2px;
 }

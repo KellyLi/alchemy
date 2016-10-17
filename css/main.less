@@ -1,5 +1,5 @@
 body {
-	min-width: 940px;
+	min-width: 320px;
   background: #222;
   margin: 0;
 	font-family: 'Open Sans', sans-serif;
@@ -771,11 +771,11 @@ nav {
 .span_1_of_3 { width: 31%;  }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
-// @media only screen and (max-width: 480px) {
-// 		.col {  margin: 1% 0 1% 0%;  }
-// 			.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%;  }
-//
-// }
+@media only screen and (max-width: 720px) {
+		.col {  margin: 1% 0 1% 0%;  }
+			.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%;  }
+
+}
 
 .span_2_of_2 {
 		width: 100%;
@@ -786,19 +786,19 @@ nav {
 
 }
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+/*  GO FULL WIDTH AT LESS THAN 720 PIXELS */
 
-// @media only screen and (max-width: 480px) {
-// 		.col {
-// 				margin: 1% 0 1% 0%;
-// 				}
-//
-// }
-//
-// @media only screen and (max-width: 480px) {
-// 		.span_2_of_2, .span_1_of_2 { width: 100%;  }
-//
-// }
+@media only screen and (max-width: 720px) {
+		.col {
+				margin: 1% 0 1% 0%;
+				}
+
+}
+
+@media only screen and (max-width: 720px) {
+		.span_2_of_2, .span_1_of_2 { width: 100%;  }
+
+}
 /*  GRID OF FOUR  */
 .span_4_of_4 {
 		width: 100%;
@@ -817,12 +817,12 @@ nav {
 
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-// @media only screen and (max-width: 480px) {
-// 		.col {  margin: 1% 0 1% 0%;  }
-// 			.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%;  }
-//
-// }
+/*  GO FULL WIDTH BELOW 720 PIXELS */
+@media only screen and (max-width: 720px) {
+		.col {  margin: 1% 0 1% 0%;  }
+			.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%;  }
+
+}
 
 
 //
@@ -915,4 +915,106 @@ nav {
     -webkit-transform: translateY(0); /* Chrome, Safari, Opera */
     transform: translateY(0);
   }
+}
+
+// Media Queries
+//////////////////////////////////////////////////
+@media (max-width: 720px) {
+	nav {
+		ul {
+			display: none;
+		}
+	}
+
+	.home {
+		.splash {
+			.splash_wrapper {
+				text-align: center;
+
+				#exoshield {
+					width: calc(80% + 10px);
+					max-width: 365px;
+				}
+
+				.border{
+					width: calc(80%);
+					max-width: 320px;
+
+					&.top {
+						margin: 40px auto 10px auto;
+						height: 60px;
+
+						h1 {
+							left: calc(50% - 12px);
+						}
+					}
+
+					&.bottom {
+						margin: 10px auto 0;
+						padding-bottom: 80px;
+					}
+				}
+			}
+		}
+
+		.intro {
+			#car_illustration {
+				text-align: center;
+				width: 100%;
+				margin: 60px auto 0;
+
+				img {
+					max-width: 500px;
+				}
+			}
+		}
+
+		.value {
+				.row2 {
+					width: 100%;
+				}
+		}
+	}
+}
+
+a.button {
+	margin-bottom: 0;
+}
+
+.contact {
+	form {
+		width: calc(100% - 10px);
+
+		input,
+		textarea {
+			resize: none;
+			font-size: 14px;
+			width: calc(100% - 10px);
+			padding: 20px;
+			border: 1px solid #c8ced6;
+			border-radius: 2px;
+			margin-bottom: 8px;
+
+			&[name='message'] {
+				padding-bottom: 100px;
+			}
+
+			&[type='submit'] {
+				cursor: pointer;
+				display: block;
+				margin: 0 auto;
+				width: 180px;
+				padding: 15px;
+				margin-top: 40px;
+				text-transform: uppercase;
+				color: #fcfeff;
+				letter-spacing: .6px;
+				font-size: 14px;
+				font-family: 'Open Sans', sans-serif;
+				background-color: #25344a;
+				border: none;
+				border-radius: 2px;
+			}
+		}
+	}
 }
