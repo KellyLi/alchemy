@@ -1,5 +1,5 @@
 body {
-  min-width: 320px;
+  min-width: 750px;
   background: #222;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -326,11 +326,10 @@ nav li a {
   margin-bottom: 10px;
 }
 .exoshield .cost_savings,
-.exoshield .comfort {
+.exoshield .eco_friendly {
   background-color: #fcfeff;
 }
-.exoshield .driver_safety,
-.exoshield .eco_friendly {
+.exoshield .driver_safety {
   background-color: #f7f8f9;
 }
 .exoshield .cost_savings p,
@@ -898,9 +897,6 @@ nav li a {
 }
 a.button {
   margin-bottom: 0;
-}
-.contact form {
-  width: calc(90%);
 }
 .contact form input,
 .contact form textarea {
