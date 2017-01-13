@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="svg+xml" fill="#344356">
+            <g id="hamburger_open_3_">
+                <path d="M14.7692308,5 L1.23076923,5 C0.553846154,5 0,5.45 0,6 C0,6.55 0.553846154,7 1.23076923,7 L14.7692308,7 C15.4461538,7 16,6.55 16,6 C16,5.45 15.4461538,5 14.7692308,5 Z M14.7692308,10 L1.23076923,10 C0.553846154,10 0,10.45 0,11 C0,11.55 0.553846154,12 1.23076923,12 L14.7692308,12 C15.4461538,12 16,11.55 16,11 C16,10.45 15.4461538,10 14.7692308,10 Z M14.7692308,0 L1.23076923,0 C0.553846154,0 0,0.45 0,1 C0,1.55 0.553846154,2 1.23076923,2 L14.7692308,2 C15.4461538,2 16,1.55 16,1 C16,0.45 15.4461538,0 14.7692308,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

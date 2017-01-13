@@ -1,9 +1,15 @@
 body {
-  min-width: 750px;
+  min-width: 320px;
   background: #222;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4em;
+}
+.desktop_only {
+  display: block;
+}
+.mobile_only {
+  display: none;
 }
 .content_wrapper {
   max-width: 940px;
@@ -55,6 +61,7 @@ a {
   margin: 10px auto 0;
 }
 a.button {
+  -webkit-appearance: none;
   cursor: pointer;
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -88,12 +95,18 @@ a.button:hover {
   line-height: 30px;
   margin-right: 5px;
 }
+#mobile-menu {
+  display: none;
+}
 nav {
   position: relative;
   background-color: #f7f8f9;
   border-bottom: 1px solid #ebedf0;
   width: 100%;
   padding: 25px 0;
+}
+nav #mobile-menu-link {
+  display: none;
 }
 nav ul {
   position: absolute;
@@ -283,7 +296,6 @@ nav li a {
 .exoshield .splash img {
   width: 783px;
   margin: 0 auto 60px;
-  display: block;
 }
 .exoshield .benefits {
   background-color: #f7f8f9;
@@ -315,7 +327,7 @@ nav li a {
   width: 140px;
   vertical-align: top;
 }
-.exoshield .wipers .text_wrapper {
+.exoshield .wipers .text-wrapper {
   display: inline-block;
   width: 750px;
   margin-left: 30px;
@@ -533,7 +545,7 @@ nav li a {
 }
 .contact form {
   padding-top: 30px;
-  width: 630px;
+  max-width: 630px;
   margin: 0 auto;
   text-align: center;
 }
@@ -599,6 +611,26 @@ nav li a {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+.about .team .avatar {
+  text-align: center;
+}
+.about .team .quote p {
+  display: inline-block;
+}
+.about .team .quote::before {
+  content: "\“";
+  font-family: Georgia;
+  font-size: 80px;
+  color: grey;
+  height: 10px;
+}
+.about .team .quote::after {
+  content: "\”";
+  font-family: Georgia;
+  font-size: 80px;
+  color: grey;
+  vertical-align: top;
+}
 .about .team .faces {
   padding-bottom: 30px;
 }
@@ -617,10 +649,13 @@ nav li a {
   font-size: 14px;
   height: 50px;
   padding-left: 20px;
-  width: 300px;
+  max-width: 300px;
   border: 1px solid #c8ced6;
   border-radius: 2px;
   margin-bottom: 8px;
+}
+.site-footer form input[type='email'] {
+  width: 100%;
 }
 .site-footer form input[type='submit'] {
   display: block;
@@ -687,8 +722,8 @@ nav li a {
 .span_1_of_3 {
   width: 31%;
 }
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 720px) {
+/*  GO FULL WIDTH BELOW 870 PIXELS */
+@media only screen and (max-width: 870px) {
   .col {
     margin: 1% 0 1% 0%;
   }
@@ -705,12 +740,12 @@ nav li a {
   width: 48%;
 }
 /*  GO FULL WIDTH AT LESS THAN 720 PIXELS */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
   .col {
     margin: 1% 0 1% 0%;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
   .span_2_of_2,
   .span_1_of_2 {
     width: 100%;
@@ -730,7 +765,7 @@ nav li a {
   width: 22%;
 }
 /*  GO FULL WIDTH BELOW 720 PIXELS */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
   .col {
     margin: 1% 0 1% 0%;
   }
@@ -857,44 +892,6 @@ nav li a {
     transform: translateY(0);
   }
 }
-@media (max-width: 720px) {
-  nav ul {
-    display: none;
-  }
-  .home .splash .splash_wrapper {
-    text-align: center;
-  }
-  .home .splash .splash_wrapper #exoshield {
-    width: calc(90%);
-    max-width: 365px;
-  }
-  .home .splash .splash_wrapper .border {
-    width: calc(80%);
-    max-width: 320px;
-  }
-  .home .splash .splash_wrapper .border.top {
-    margin: 40px auto 10px auto;
-    height: 60px;
-  }
-  .home .splash .splash_wrapper .border.top h1 {
-    left: calc(38%);
-  }
-  .home .splash .splash_wrapper .border.bottom {
-    margin: 10px auto 0;
-    padding-bottom: 80px;
-  }
-  .home .intro #car_illustration {
-    text-align: center;
-    width: 100%;
-    margin: 60px auto 0;
-  }
-  .home .intro #car_illustration img {
-    max-width: 500px;
-  }
-  .home .value .row2 {
-    width: 100%;
-  }
-}
 a.button {
   margin-bottom: 0;
 }
@@ -928,4 +925,138 @@ a.button {
   background-color: #25344a;
   border: none;
   border-radius: 2px;
+}
+@media (max-width: 870px) {
+  .desktop_only {
+    display: none;
+  }
+  .mobile_only {
+    display: block;
+  }
+  nav {
+    padding: 15px 0;
+    text-align: center;
+  }
+  nav #logo {
+    margin: 0;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #mobile-menu-link {
+    width: 16px;
+    height: 12px;
+    background: url('/img/menu.svg');
+    display: block;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 4px;
+  }
+  #mobile-menu {
+    display: block;
+    position: fixed;
+    left: -200px;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    width: 200px;
+    background-color: #26344a;
+    transition: .1s;
+  }
+  #mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #mobile-menu ul li {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 20px;
+    letter-spacing: .6px;
+  }
+  #mobile-menu ul li a {
+    color: #ddd;
+  }
+  #mobile-menu-close {
+    width: 12px;
+    height: 12px;
+    background: url('/img/menuclose.svg');
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .home .splash .splash_wrapper {
+    text-align: center;
+  }
+  .home .splash .splash_wrapper #exoshield {
+    width: calc(90%);
+    max-width: 365px;
+  }
+  .home .splash .splash_wrapper .border {
+    width: calc(80%);
+    max-width: 320px;
+  }
+  .home .splash .splash_wrapper .border.top {
+    margin: 40px auto 10px auto;
+    height: 60px;
+  }
+  .home .splash .splash_wrapper .border.bottom {
+    margin: 10px auto 0;
+    padding-bottom: 80px;
+  }
+  .home .intro #car_illustration {
+    text-align: center;
+    width: 100%;
+    margin: 60px auto 0;
+  }
+  .home .intro #car_illustration img {
+    max-width: 500px;
+  }
+  .home .value .row2 {
+    width: 100%;
+  }
+  .exoshield .splash img {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+  }
+  .exoshield .benefits ul {
+    padding-left: 0;
+  }
+  .exoshield .cost_savings p,
+  .exoshield .eco_friendly p,
+  .exoshield .driver_safety p {
+    margin-bottom: 0;
+  }
+  .exoshield .cost_savings h2,
+  .exoshield .eco_friendly h2,
+  .exoshield .driver_safety h2 {
+    margin-top: 20px;
+  }
+  .exoshield .wipers .text-wrapper {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+  .exoshield .wipers .text-wrapper h2 {
+    margin-top: 0;
+  }
+  .exoshield .wipers .text-wrapper p {
+    margin-bottom: 0;
+  }
+  .partnerships h2 {
+    margin-top: 20px;
+  }
+  .partnerships p {
+    text-align: left;
+  }
+  .about .faces {
+    text-align: center;
+  }
+  .site-footer {
+    padding-left: 30px;
+  }
+  .site-footer form input[type='email'] {
+    width: 240px;
+  }
 }

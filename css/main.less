@@ -1,9 +1,17 @@
 body {
-	min-width: 750px;
+	min-width: 320px;
   background: #222;
   margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.4em;
+}
+
+.desktop_only {
+	display: block;
+}
+
+.mobile_only {
+	display: none;
 }
 
 .content_wrapper {
@@ -64,6 +72,7 @@ a {
 }
 
 a.button {
+	-webkit-appearance: none; //Clear iOS Safari style
 	cursor: pointer;
 	margin-bottom: 20px;
 	padding: 10px 20px;
@@ -101,12 +110,20 @@ a.button {
 	margin-right: 5px;
 }
 
+#mobile-menu {
+	display: none;
+}
+
 nav {
 	position: relative;
 	background-color: #f7f8f9;
 	border-bottom: 1px solid #ebedf0;
 	width: 100%;
 	padding: 25px 0;
+
+	#mobile-menu-link {
+		display: none;
+	}
 
 	ul {
 		position: absolute;
@@ -334,7 +351,6 @@ nav {
 		img {
 			width: 783px;
 			margin: 0 auto 60px;
-			display: block;
 		}
 	}
 
@@ -372,7 +388,7 @@ nav {
 			width: 140px;
 			vertical-align: top;
 		}
-		.text_wrapper {
+		.text-wrapper {
 			display: inline-block;
 			width: 750px;
 			margin-left: 30px;
@@ -614,7 +630,7 @@ nav {
 
 	form {
 		padding-top: 30px;
-		width: 630px;
+		max-width: 630px;
 		margin: 0 auto;
 		text-align: center;
 
@@ -687,6 +703,30 @@ nav {
 			margin-bottom: 10px;
 		}
 
+		.avatar {
+			text-align: center;
+		}
+
+		.quote {
+			p {
+				display: inline-block;
+			}
+			&::before {
+				content:"\“";
+				font-family: Georgia;
+				font-size: 80px;
+				color: grey;
+				height: 10px;
+			}
+			&::after {
+				content:"\”";
+				font-family: Georgia;
+				font-size: 80px;
+				color: grey;
+				vertical-align: top;
+			}
+		}
+
 		.faces {
 			padding-bottom: 30px;
 		}
@@ -708,10 +748,14 @@ nav {
 			font-size: 14px;
 			height: 50px;
 			padding-left: 20px;
-			width: 300px;
+			max-width: 300px;
 			border: 1px solid #c8ced6;
 			border-radius: 2px;
 			margin-bottom: 8px;
+
+			&[type='email'] {
+				width: 100%;
+			}
 
 			&[type='submit'] {
 				display: block;
@@ -769,8 +813,8 @@ nav {
 .span_2_of_3 { width: 65%;  }
 .span_1_of_3 { width: 31%;  }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 720px) {
+/*  GO FULL WIDTH BELOW 870 PIXELS */
+@media only screen and (max-width: 870px) {
 		.col {  margin: 1% 0 1% 0%;  }
 			.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%;  }
 
@@ -787,14 +831,14 @@ nav {
 
 /*  GO FULL WIDTH AT LESS THAN 720 PIXELS */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
 		.col {
 				margin: 1% 0 1% 0%;
 				}
 
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
 		.span_2_of_2, .span_1_of_2 { width: 100%;  }
 
 }
@@ -817,7 +861,7 @@ nav {
 }
 
 /*  GO FULL WIDTH BELOW 720 PIXELS */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 870px) {
 		.col {  margin: 1% 0 1% 0%;  }
 			.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%;  }
 
@@ -916,66 +960,6 @@ nav {
   }
 }
 
-// Media Queries
-//////////////////////////////////////////////////
-@media (max-width: 720px) {
-	nav {
-		ul {
-			display: none;
-		}
-	}
-
-	.home {
-		.splash {
-			.splash_wrapper {
-				text-align: center;
-
-				#exoshield {
-					width: calc(80% + 10px);
-					max-width: 365px;
-				}
-
-				.border{
-					width: calc(80%);
-					max-width: 320px;
-
-					&.top {
-						margin: 40px auto 10px auto;
-						height: 60px;
-
-						h1 {
-							left: calc(50% - 12px);
-						}
-					}
-
-					&.bottom {
-						margin: 10px auto 0;
-						padding-bottom: 80px;
-					}
-				}
-			}
-		}
-
-		.intro {
-			#car_illustration {
-				text-align: center;
-				width: 100%;
-				margin: 60px auto 0;
-
-				img {
-					max-width: 500px;
-				}
-			}
-		}
-
-		.value {
-				.row2 {
-					width: 100%;
-				}
-		}
-	}
-}
-
 a.button {
 	margin-bottom: 0;
 }
@@ -1015,3 +999,188 @@ a.button {
 		}
 	}
 }
+
+// Media Queries
+//////////////////////////////////////////////////
+@media (max-width: 870px) {
+	.desktop_only {
+		display: none;
+	}
+	.mobile_only {
+		display: block;
+	}
+
+	nav {
+		padding: 15px 0;
+		text-align: center;
+
+		#logo {
+			margin: 0;
+		}
+
+		ul {
+			display: none;
+		}
+
+		#mobile-menu-link {
+			width: 16px;
+			height: 12px;
+			background: url('/img/menu.svg');
+			display: block;
+			position: absolute;
+			margin-left: 30px;
+			margin-top: 4px;
+		}
+	}
+
+	#mobile-menu {
+		display: block;
+		position: fixed;
+		left: -200px;
+		top: 0;
+		height: 100vh;
+		z-index: 1;
+		width: 200px;
+		background-color: #26344a;
+		transition: .1s;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+				text-transform: uppercase;
+				font-size: 14px;
+				margin-left: 20px;
+				margin-top: 20px;
+				letter-spacing: .6px;
+
+				a {
+					color: #ddd;
+				}
+			}
+		}
+	}
+
+	#mobile-menu-close {
+			width: 12px;
+			height: 12px;
+			background: url('/img/menuclose.svg');
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 20px;
+	}
+
+	.home {
+		.splash {
+			.splash_wrapper {
+				text-align: center;
+
+				#exoshield {
+					width: calc(80% + 10px);
+					max-width: 365px;
+				}
+
+				.border{
+					width: calc(80%);
+					max-width: 320px;
+
+					&.top {
+						margin: 40px auto 10px auto;
+						height: 60px;
+					}
+
+					&.bottom {
+						margin: 10px auto 0;
+						padding-bottom: 80px;
+					}
+				}
+			}
+		}
+
+		.intro {
+			#car_illustration {
+				text-align: center;
+				width: 100%;
+				margin: 60px auto 0;
+
+				img {
+					max-width: 500px;
+				}
+			}
+		}
+
+		.value {
+				.row2 {
+					width: 100%;
+				}
+		}
+	}
+
+	.exoshield {
+		.splash {
+			img {
+				width: 100%;
+				max-width: 500px;
+				margin: 10px auto;
+			}
+		}
+		.benefits {
+			ul {
+				padding-left: 0;
+			}
+		}
+
+		.cost_savings,
+		.eco_friendly,
+		.driver_safety {
+			p {
+				margin-bottom: 0;
+			}
+			h2 {
+				margin-top: 20px;
+			}
+		}
+
+		.wipers {
+			.text-wrapper {
+				width: 100%;
+				margin: 10px 0 0 0;
+
+				h2 {
+					margin-top: 0;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.partnerships {
+		h2 {
+			margin-top: 20px;
+		}
+		p {
+			text-align: left;
+		}
+	}
+
+	.about {
+		.faces {
+			text-align: center;
+		}
+	}
+
+	.site-footer {
+		padding-left: 30px;
+
+		form input[type='email'] {
+			width: 240px;
+		}
+	}
+}
+
+
