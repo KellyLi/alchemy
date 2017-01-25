@@ -600,39 +600,26 @@ nav li a {
 .about .team {
   background-color: #fcfeff;
 }
-.about .team img {
-  vertical-align: -4px;
-  width: 20px;
-  height: 20px;
-}
-.about .team img.face {
-  width: 200px;
-  height: 200px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.about .team .avatar {
-  text-align: center;
-}
-.about .team .quote p {
-  display: inline-block;
-}
-.about .team .quote::before {
-  content: "\“";
-  font-family: Georgia;
-  font-size: 80px;
-  color: grey;
-  height: 10px;
-}
-.about .team .quote::after {
-  content: "\”";
-  font-family: Georgia;
-  font-size: 80px;
-  color: grey;
-  vertical-align: top;
+.about .team .group {
+  margin-top: 40px;
 }
 .about .team .faces {
-  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+.about .team .faces .flex-container {
+  display: flex;
+  margin: 40px auto;
+}
+.about .team .faces h1 {
+  font-size: 24px;
+  text-align: left;
+}
+.about .team .faces p {
+  margin: 10px auto;
+}
+.about .team .faces img.face {
+  max-width: 240px;
+  margin-right: 40px;
 }
 .site-footer {
   padding: 80px 0 30px;
@@ -1050,13 +1037,22 @@ a.button {
   .partnerships p {
     text-align: left;
   }
-  .about .faces {
-    text-align: center;
-  }
   .site-footer {
     padding-left: 30px;
   }
   .site-footer form input[type='email'] {
     width: 240px;
+  }
+}
+@media (max-width: 650px) {
+  .about .team .faces .flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .team .faces .flex-container h1 {
+    text-align: center;
+  }
+  .about .team .faces .flex-container p:last-child {
+    text-align: left;
   }
 }
