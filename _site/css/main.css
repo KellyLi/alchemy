@@ -53,6 +53,7 @@ section {
 }
 a {
   text-decoration: none;
+  color: #4b7bc9;
 }
 #mc-embedded-subscribe {
   margin: 10px 0 0 0;
@@ -620,6 +621,25 @@ nav li a {
 .about .team .faces img.face {
   max-width: 240px;
   margin-right: 40px;
+}
+.faq {
+  background-color: #fcfeff;
+}
+.faq h2 {
+  text-align: left;
+  line-height: 1.3em;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-weight: 300;
+  color: #222;
+  margin: 10px auto;
+}
+.faq p {
+  margin-bottom: 40px;
+}
+.faq a.download-link {
+  display: block;
+  margin-top: 10px;
 }
 .site-footer {
   padding: 80px 0 30px;
